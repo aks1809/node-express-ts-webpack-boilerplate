@@ -9,7 +9,7 @@
         "sourceMap": true,
         "noImplicitAny": true,
         "allowJs": true,
-        "baseUrl": "./src",
+        "baseUrl": "src/",
         "paths": {
             "@utils/*": [
                 "utils/*"
@@ -17,14 +17,8 @@
             "@config/*": [
                 "config/*"
             ],
-            "@models/*": [
-                "models/*"
-            ],
-            "@controllers/*": [
-                "controllers/*"
-            ],
-            "@routes/*": [
-                "routes/*"
+            "@database/*": [
+                "database/*"
             ]
         }
     },

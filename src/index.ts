@@ -1,13 +1,22 @@
-import express from 'express';
 import logger from '@config/logger';
+import secrets from "@config/secrets";
+import httpServer from "./server";
+import db from "@database/database";
+import * as schema from "@database/schema";
 
-const app = express();
+httpServer.listen(secrets.PORT, async () => {
+    try {
+      const res = await db.select().from(schema.usersSchema);
+      console.log(res);
+      console.log(`API server listening on port: ${secrets.PORT}`);
+      logger.info(`API server listening on port: ${secrets.PORT}`);
+    } catch (err) {
+      console.error("Cannot run server! ", err);
+      logger.error("Cannot run server! ", err);
+      process.exit(0);
+    }
+  });
 
-app.get('/', (req, res) => {
-    res.send("YO");
-});
-
-app.listen(9000, () => {
-    logger.info("Listening on port 9000");
-    console.log("Listening on port 9000");
-});
+process.on("SIGINT", () => {
+    process.exit(0);
+  });

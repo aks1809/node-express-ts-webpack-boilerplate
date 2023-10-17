@@ -14,9 +14,7 @@ module.exports = {
         alias: {
             '@utils': path.resolve(__dirname, 'src/utils'),
             '@config': path.resolve(__dirname, 'src/config'),
-            '@models': path.resolve(__dirname, 'src/models'),
-            '@controllers': path.resolve(__dirname, 'src/controllers'),
-            '@routes': path.resolve(__dirname, 'src/routes'),
+            '@database': path.resolve(__dirname, 'src/database'),
         },
     },
     watchOptions: {
