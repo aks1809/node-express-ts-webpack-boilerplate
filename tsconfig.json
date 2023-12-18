@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "outDir": "./dist",
+        "strict": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "allowJs": true,
+        "baseUrl": "./src",
+        "paths": {
+            "@config/*": [
+                "config/*"
+            ],
+            "@controller/*": [
+                "controller/*"
+            ],
+            "@dao/*": [
+                "dao/*"
+            ],
+            "@database/*": [
+                "database/*"
+            ],
+            "@routes/*": [
+                "routes/*"
+            ],
+            "@schema/*": [
+                "schema/*"
+            ],
+            "@service/*": [
+                "service/*"
+            ],
+            "@utils/*": [
+                "utils/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
